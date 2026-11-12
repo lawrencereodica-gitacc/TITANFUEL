@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  background-color: #c2cad0;
+  color: #ffffff;
+}
+
+/* Header & Pill-Shaped Nav Styling (Eksaktong kapareho ng Home) */
+header {
+  padding: 15px 3% 10px;
+  background: radial-gradient(circle at center, #d8dfe4 0%, #aeb7be 100%);
+}
+
+.brand-banner {
+  font-size: clamp(3.2rem, 10vw, 8.5rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 0.9;
+  color: #ffffff;
+  text-transform: uppercase;
+  user-select: none;
+  margin-bottom: 18px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(130, 138, 145, 0.75);
+  padding: 8px 25px;
+  border-radius: 50px;
+  backdrop-filter: blur(6px);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* Puting pill button para sa Active link (ABOUT) */
+nav a.active {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* About Page Content */
+.about-page {
+  padding: 50px 5%;
+  min-height: calc(85vh - 30px);
+  background: radial-gradient(circle at center, #d8dfe4 0%, #aeb7be 100%);
+}
+
+.about-header {
+  margin-bottom: 40px;
+}
+
+.section-tag {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #475467;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.about-header h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-story p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2b3440;
+  margin-bottom: 20px;
+}
+
+/* Key Metrics Row */
+.about-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 2px solid #111111;
+}
+
+.metric h3 {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 6px;
+  color: #111111;
+}
+
+.metric span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #475467;
+}
+
+/* Right Side Pillars */
+.about-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pillar-item {
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border-left: 4px solid #111111;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.pillar-item h4 {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  color: #111111;
+}
+
+.pillar-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475467;
+}
+
+/* Responsive View */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .nav-left {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-metrics {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

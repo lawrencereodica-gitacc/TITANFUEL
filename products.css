@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  background-color: #c2cad0;
+  color: #ffffff;
+}
+
+/* Top Announcement Bar */
+.announcement-bar {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  padding: 8px 15px;
+  text-transform: uppercase;
+}
+
+/* Header & Pill-Shaped Nav Styling */
+header {
+  padding: 15px 3% 10px;
+  background: radial-gradient(circle at center, #d8dfe4 0%, #aeb7be 100%);
+}
+
+.brand-banner {
+  font-size: clamp(3.2rem, 10vw, 8.5rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 0.9;
+  color: #ffffff;
+  text-transform: uppercase;
+  user-select: none;
+  margin-bottom: 18px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(130, 138, 145, 0.75);
+  padding: 8px 25px;
+  border-radius: 50px;
+  backdrop-filter: blur(6px);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+nav a.active {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* Products Page Content */
+.products-page {
+  padding: 50px 5% 80px;
+  min-height: calc(85vh - 30px);
+  background: radial-gradient(circle at center, #d8dfe4 0%, #aeb7be 100%);
+}
+
+.products-header {
+  margin-bottom: 45px;
+}
+
+.section-tag {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #475467;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.products-header h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Product Cards Grid (3 columns) */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 35px 28px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+
+.product-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #111111;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 160px;
+  height: 160px;
+  object-fit: contain;
+  margin: 15px auto 20px;
+  filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.25));
+}
+
+.product-info h3 {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #111111;
+  margin-bottom: 6px;
+}
+
+.product-weight {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #475467;
+  margin-bottom: 14px;
+}
+
+.product-info p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #475467;
+  margin-bottom: 24px;
+}
+
+.price {
+  display: block;
+  font-size: 24px;
+  font-weight: 900;
+  color: #111111;
+  margin-bottom: 18px;
+}
+
+.order-btn {
+  display: block;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  padding: 14px 0;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}
+
+.order-btn:hover {
+  background-color: #222222;
+}
+
+/* Responsive View */
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .nav-left {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
